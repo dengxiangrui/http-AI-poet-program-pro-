@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AI诗词创作</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-area">
+        <div class="logo">诗</div>
+        <div class="brand">
+          <span class="title">AI诗词创作</span>
+          <span class="subtitle">以此心境，以此为题...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input 
+          class="search-input" 
+          placeholder="以此心境，以此为题..." 
+          id="inputText"
+        />
+      </div>
+      <button 
+        class="create-btn" 
+        id="createBtn"
+      >
+        <span id="createBtnText">开始创作</span>
+      </button>
+    </div>
+
+    <div class="tags-section">
+      <span class="section-title">热门主题</span>
+      <div class="tags-list" id="hotTags"></div>
+    </div>
+
+    <div class="options-section">
+      <div class="option-row">
+        <span class="option-label">诗词类型</span>
+        <div class="option-list" id="typeList"></div>
+      </div>
+
+      <div class="option-row">
+        <span class="option-label">风格模仿</span>
+        <div class="option-list" id="styleList"></div>
+      </div>
+
+      <div class="option-row">
+        <span class="option-label">情感基调</span>
+        <div class="option-list" id="emotionList"></div>
+      </div>
+
+      <div class="acrostic-row">
+        <span class="acrostic-label">藏头诗模式</span>
+        <label class="acrostic-switch">
+          <input type="checkbox" id="acrosticSwitch">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="result-section" id="resultSection" style="display: none;">
+      <div class="result-card">
+        <div class="poem-header">
+          <span class="poem-title" id="poemTitle"></span>
+          <div class="poem-meta">
+            <span class="meta-item" id="poemType"></span>
+            <span id="poemStyleDot" class="meta-dot" style="display: none;">·</span>
+            <span id="poemStyle" class="meta-item" style="display: none;"></span>
+          </div>
+        </div>
+        
+        <div class="poem-content" id="poemContent"></div>
+
+        <div class="poem-tags" id="poemTags"></div>
+      </div>
+
+      <div class="action-row">
+        <div class="action-item" id="analyzeBtn">
+          <span class="action-icon">📖</span>
+          <span class="action-text">鉴赏</span>
+        </div>
+        <div class="action-item" id="copyBtn">
+          <span class="action-icon">📋</span>
+          <span class="action-text">复制</span>
+        </div>
+      </div>
+
+      <div class="analysis-card" id="analysisCard" style="display: none;">
+        <div class="analysis-header">
+          <span class="analysis-title">诗词鉴赏</span>
+          <div class="close-btn" id="closeAnalysisBtn">×</div>
+        </div>
+        <div class="analysis-content" id="analysisContent"></div>
+      </div>
+
+      <div class="polish-section">
+        <div class="polish-input-row">
+          <input 
+            class="polish-input"
+            placeholder="不满意？告诉我哪里需要修改..."
+            id="polishInput"
+          />
+          <button class="polish-btn" id="polishBtn">修改</button>
+        </div>
+        <div class="quick-polish" id="quickPolish"></div>
+      </div>
+    </div>
+
+    <div class="history-section" id="historySection" style="display: none;">
+      <div class="section-header">
+        <span class="section-title">历史创作</span>
+        <span class="clear-btn" id="clearHistoryBtn">清空</span>
+      </div>
+      <div class="history-list" id="historyList"></div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="utils/api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
