@@ -31,6 +31,7 @@
 
 ## 🚀 快速开始
 
+
 ### 1. 本地运行
 
 如果你想在本地运行该项目：
@@ -39,15 +40,28 @@
     ```bash
     git clone https://github.com/dengxiangrui/http-AI-poet-program-pro-.git
     ```
-2.  进入目录：
+2.  进入项目根目录：
     ```bash
     cd http-AI-poet-program-pro-
     ```
-3.  直接打开 `index.html` 即可（注意：部分浏览器可能因跨域限制无法调用 API，建议使用本地服务器）：
-    ```bash
-    # 使用 Python 快速启动
-    python -m http.server 8000
-    ```
+3.  **启动本地服务器**：
+    
+    **注意：严禁直接双击 `index.html` 打开！** 浏览器安全策略会阻止本地文件发起 API 请求。
+    
+    *   **使用 Python (推荐)**：
+        确保已安装 Python，执行以下命令：
+        ```bash
+        # Python 3
+        python -m http.server 8000
+        ```
+    *   **使用 Node.js**：
+        如果你已安装 Node.js，可以全局安装 `live-server`：
+        ```bash
+        npm install -g live-server
+        live-server
+        ```
+4.  打开浏览器访问 `http://localhost:8000` 即可体验。
+
 
 ### 2. 部署到你的 Netlify/Vercel
 
