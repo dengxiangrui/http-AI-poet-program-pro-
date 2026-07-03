@@ -53,7 +53,7 @@
 
 1.  点击 Netlify/Vercel 的 "New Site from Git"。
 2.  选择本仓库。
-3.  **配置发布目录**：`web`
+3.  发布目录留空。
 4.  构建命令留空。
 5.  点击部署。
 
@@ -61,22 +61,16 @@
 
 **⚠️ 安全警告：** 为了防止 API Key 泄露导致费用损失，请务必配置环境变量。
 
-1.  在 `api.js` 中，不要硬编码 Key，应使用环境变量（在 Netlify/Vercel 后台设置）：
-    ```javascript
-    // api.js
-    const config = {
-        API_KEY: process.env.DASHSCOPE_API_KEY || '你的临时测试key(不推荐)',
-        // ...
-    };
-    ```
+1.  请直接在 api.js 文件中替换 API_KEY 常量
 2.  在 Netlify/Vercel 的项目设置中，添加环境变量：
-    -   Key: `DASHSCOPE_API_KEY`
+    -   Key: `API_KEY`
     -   Value: `sk-你的实际密钥`
 
 ## 📂 项目结构
 
 ```text
 ├── index.html          # 主页面结构
+├── srtp.png            # 网页版主界面截图
 ├── style.css           # 样式文件 (中国风设计)
 ├── app.js              # 核心业务逻辑 (状态管理、DOM 操作)
 ├── api.js              # AI 接口请求封装
