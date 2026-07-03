@@ -11,7 +11,7 @@
 ## 📸 截图预览
 
 <!-- 如果你有截图，可以在这里放一张 -->
-![AI 诗词创作助手预览](screenshot.png)
+![AI 诗词创作助手预览](srtp.png)
 
 ## ✨ 核心功能
 
@@ -37,11 +37,11 @@
 
 1.  克隆仓库：
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/dengxiangrui/http-AI-poet-program-pro-.git
     ```
 2.  进入目录：
     ```bash
-    cd your-repo-name/web
+    cd http-AI-poet-program-pro-
     ```
 3.  直接打开 `index.html` 即可（注意：部分浏览器可能因跨域限制无法调用 API，建议使用本地服务器）：
     ```bash
@@ -76,9 +76,8 @@
 ## 📂 项目结构
 
 ```text
-/web
-  ├── index.html          # 主页面结构
-  ├── style.css           # 样式文件 (中国风设计)
-  ├── app.js              # 核心业务逻辑 (状态管理、DOM 操作)
-  ├── api.js              # AI 接口请求封装
-  └── README.md           # 项目说明
+├── index.html          # 主页面结构
+├── style.css           # 样式文件 (中国风设计)
+├── app.js              # 核心业务逻辑 (状态管理、DOM 操作)
+├── api.js              # AI 接口请求封装
+└── README.md           # 项目说明
